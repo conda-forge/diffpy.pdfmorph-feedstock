@@ -25,6 +25,7 @@ requirements:
     - diffpy.utils
     - scipy
     - numpy
+    - bg-mpl-stylesheets
     - python >=3
 
 test:
