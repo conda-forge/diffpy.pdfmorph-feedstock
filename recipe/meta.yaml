@@ -1,5 +1,5 @@
 {% set name = "diffpy.pdfmorph" %}
-{% set version = "0.0.1" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/diffpy/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 699952c747048db4a383e81fa867887a86480200a56d7a51bdd1ad43d25b392d
+  sha256: 21e49694f7317697e91f26407accae56b4cd8847eadea09ab6c77c6e17116296
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
-  entry_points: 
+  entry_points:
     - pdfmorph = diffpy.pdfmorph.pdfmorphapp:main
 
 requirements:
@@ -25,6 +25,7 @@ requirements:
     - diffpy.utils
     - scipy
     - numpy
+    - bg-mpl-stylesheets
     - python >=3
 
 test:
@@ -35,7 +36,7 @@ about:
   home: http://github.com/diffpy/diffpy.pdfmorph
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE.rst
   summary: 'More quantitative measurements and analyses for spectra taken at different temperatures.'
 
   description: |
