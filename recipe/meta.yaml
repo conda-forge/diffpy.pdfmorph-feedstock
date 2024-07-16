@@ -10,6 +10,7 @@ source:
   sha256: 21e49694f7317697e91f26407accae56b4cd8847eadea09ab6c77c6e17116296
 
 build:
+  preserve_egg_dir: true
   noarch: python
   number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
