@@ -32,6 +32,9 @@ test:
   imports:
     - diffpy.pdfmorph
 
+  requires:
+    - pytest
+
 about:
   home: http://github.com/diffpy/diffpy.pdfmorph
   license: BSD-3-Clause
