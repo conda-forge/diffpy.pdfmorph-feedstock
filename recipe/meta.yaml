@@ -1,34 +1,36 @@
 {%- set name = "diffpy.pdfmorph" -%}
 {%- set version = "0.1.1" -%}
+{%- set sha256 = "7644600ad7790bb870aae04fe04ac3be37d3aa7ba87abb11c25e2c4efaeb894e" -%}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/diffpy/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 21e49694f7317697e91f26407accae56b4cd8847eadea09ab6c77c6e17116296
+  url: https://pypi.io/packages/source/d/diffpy_pdfmorph/diffpy_pdfmorph-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   preserve_egg_dir: true
   noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
-  entry_points:
-    - pdfmorph = diffpy.pdfmorph.pdfmorphapp:main
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
-    - python >=3
+    - python >=3.10
     - setuptools
     - pip
+
   run:
+    - python >=3.10
+    - setuptools
+    - python >=3.10
     - matplotlib-base
     - diffpy.utils
     - scipy
     - numpy
     - bg-mpl-stylesheets
-    - python >=3
 
 test:
   imports:
@@ -42,15 +44,13 @@ test:
     - pytest
 
 about:
-  home: http://github.com/diffpy/diffpy.pdfmorph
+  home: https://github.com/diffpy/diffpy.pdfmorph/
+  summary: 'More quantitative measurements and analyses for spectra taken at different temperatures.'
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
-  summary: 'More quantitative measurements and analyses for spectra taken at different temperatures.'
   description: |
-    PDFmorph is a Python software package designed to increase the insight
-    researchers can get into their spectra collected for atomic pair 
-    distribution functions
+    PDFmorph is a Python software package designed to increase the insight researchers can get into their spectra collected for atomic pair distribution functions.
   doc_url: http://diffpy.github.io/diffpy.pdfmorph/
   dev_url: https://github.com/diffpy/diffpy.pdfmorph/
 
