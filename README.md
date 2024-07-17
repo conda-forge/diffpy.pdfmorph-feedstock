@@ -3,17 +3,17 @@ About diffpy.pdfmorph-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/diffpy.pdfmorph-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/diffpy/diffpy.pdfmorph
+Home: https://github.com/diffpy/diffpy.pdfmorph/
 
 Package license: BSD-3-Clause
 
-Summary: More quantitative measurements and analyses for spectra taken at different temperatures.
+Summary: Tools for manipulating and comparing PDF profiles
 
-Development: https://github.com/diffpy/diffpy.pdfmorph
+Development: https://github.com/diffpy/diffpy.pdfmorph/
 
-PDFmorph is a Python software package designed to increase the insight
-researchers can get into their spectra collected for atomic pair
-distribution functions
+Documentation: http://diffpy.github.io/diffpy.pdfmorph/
+
+PDFmorph is a Python software package designed to increase the insight researchers can obtain from measured atomic pair distribution functions (PDFs) in a model-independent way. The program was designed to help a researcher answer the question: "Has my material undergone a phase transition between these two measurements?"
 
 
 Current build status
@@ -150,8 +150,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@CJ-Wright](https://github.com/CJ-Wright/)
-* [@chiahaoliu](https://github.com/chiahaoliu/)
-* [@pavoljuhas](https://github.com/pavoljuhas/)
 * [@sbillinge](https://github.com/sbillinge/)
 
