@@ -25,7 +25,6 @@ requirements:
   run:
     - python >=3.10
     - setuptools
-    - python >=3.10
     - matplotlib-base
     - diffpy.utils
     - scipy
