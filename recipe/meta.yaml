@@ -1,8 +1,8 @@
-{% set name = "diffpy.pdfmorph" %}
-{% set version = "0.1.1" %}
+{%- set name = "diffpy.pdfmorph" -%}
+{%- set version = "0.1.1" -%}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - python >=3
+    - setuptools
     - pip
   run:
     - matplotlib-base
@@ -46,13 +47,12 @@ about:
   license_family: BSD
   license_file: LICENSE.rst
   summary: 'More quantitative measurements and analyses for spectra taken at different temperatures.'
-
   description: |
     PDFmorph is a Python software package designed to increase the insight
     researchers can get into their spectra collected for atomic pair 
     distribution functions
-  # doc_url: doc_url to be released in a later version.
-  dev_url: https://github.com/diffpy/diffpy.pdfmorph
+  doc_url: http://diffpy.github.io/diffpy.pdfmorph/
+  dev_url: https://github.com/diffpy/diffpy.pdfmorph/
 
 extra:
   recipe-maintainers:
