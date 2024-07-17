@@ -27,7 +27,9 @@ requirements:
     - setuptools
     - numpy
     - scipy
-    - diffpy.utils matplotlib-base bg-mpl-stylesheets
+    - diffpy.utils
+    - matplotlib-base
+    - bg-mpl-stylesheets
 
 test:
   imports:
