@@ -1,54 +1,55 @@
-{% set name = "diffpy.pdfmorph" %}
-{% set version = "0.1.1" %}
+{%- set name = "diffpy.pdfmorph" -%}
+{%- set version = "0.1.2" -%}
+{%- set sha256 = "49448cb5e333d6e52636befc8df5665cea8849e522f2d0a6caa575b5b48cbbc4" -%}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/diffpy/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 21e49694f7317697e91f26407accae56b4cd8847eadea09ab6c77c6e17116296
+  url: https://pypi.io/packages/source/d/diffpy_pdfmorph/diffpy_pdfmorph-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
+  preserve_egg_dir: true
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
-  entry_points:
-    - pdfmorph = diffpy.pdfmorph.pdfmorphapp:main
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
-    - python >=3
+    - python >=3.10
+    - setuptools
     - pip
+
   run:
-    - matplotlib-base
-    - diffpy.utils
-    - scipy
+    - python >=3.10
+    - setuptools
     - numpy
-    - bg-mpl-stylesheets
-    - python >=3
+    - scipy
+    - diffpy.utils matplotlib-base bg-mpl-stylesheets
 
 test:
   imports:
     - diffpy.pdfmorph
 
+  requires:
+    - pytest
+    - codecov
+    - coverage
+    - pytest-env flake8
+
 about:
-  home: http://github.com/diffpy/diffpy.pdfmorph
+  home: https://github.com/diffpy/diffpy.pdfmorph/
+  summary: Tools for manipulating and comparing PDF profiles
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
-  summary: 'More quantitative measurements and analyses for spectra taken at different temperatures.'
-
   description: |
-    PDFmorph is a Python software package designed to increase the insight
-    researchers can get into their spectra collected for atomic pair 
-    distribution functions
-  # doc_url: doc_url to be released in a later version.
-  dev_url: https://github.com/diffpy/diffpy.pdfmorph
+    PDFmorph is a Python software package designed to increase the insight researchers can obtain from measured atomic pair distribution functions (PDFs) in a model-independent way. The program was designed to help a researcher answer the question: "Has my material undergone a phase transition between these two measurements?"
+  doc_url: http://diffpy.github.io/diffpy.pdfmorph/
+  dev_url: https://github.com/diffpy/diffpy.pdfmorph/
 
 extra:
   recipe-maintainers:
-    - chiahaoliu
-    - CJ-Wright
-    - pavoljuhas
     - sbillinge
