@@ -39,7 +39,8 @@ test:
     - pytest
     - codecov
     - coverage
-    - pytest-env flake8
+    - pytest-env
+    - flake8
 
 about:
   home: https://github.com/diffpy/diffpy.pdfmorph/
