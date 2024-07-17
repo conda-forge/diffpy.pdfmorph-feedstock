@@ -1,5 +1,5 @@
 {% set name = "diffpy.pdfmorph" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/diffpy/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 21e49694f7317697e91f26407accae56b4cd8847eadea09ab6c77c6e17116296
+  sha256: 849932676623cc2efdbd3c242d86dc8f50596dce6d65a3f75c052ec7ad84e84d
 
 build:
   noarch: python
