@@ -42,6 +42,9 @@ test:
   requires:
     - pytest
 
+  commands:
+    - python -m pytest
+
 about:
   home: https://github.com/diffpy/diffpy.pdfmorph/
   summary: 'More quantitative measurements and analyses for spectra taken at different temperatures.'
