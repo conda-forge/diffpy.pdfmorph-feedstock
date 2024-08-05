@@ -37,7 +37,6 @@ test:
     - diffpy.pdfmorph
     - diffpy.pdfmorph.morphs
     - diffpy.pdfmorph.morph_helpers
-    - diffpy.pdfmorph.tests
 
   requires:
     - pytest
