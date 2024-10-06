@@ -11,6 +11,8 @@ Summary: More quantitative measurements and analyses for spectra taken at differ
 
 Development: https://github.com/diffpy/diffpy.pdfmorph
 
+Documentation: https://diffpy.github.io/diffpy.pdfmorph
+
 PDFmorph is a Python software package designed to increase the insight
 researchers can get into their spectra collected for atomic pair
 distribution functions
@@ -151,6 +153,7 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@bobleesj](https://github.com/bobleesj/)
 * [@chiahaoliu](https://github.com/chiahaoliu/)
 * [@pavoljuhas](https://github.com/pavoljuhas/)
 * [@sbillinge](https://github.com/sbillinge/)
