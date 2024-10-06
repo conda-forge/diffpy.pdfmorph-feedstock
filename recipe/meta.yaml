@@ -1,36 +1,47 @@
 {% set name = "diffpy.pdfmorph" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.3rc1" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/diffpy/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 21e49694f7317697e91f26407accae56b4cd8847eadea09ab6c77c6e17116296
+  url: https://test.pypi.io/packages/source/d/diffpy_pdfmorph/diffpy_pdfmorph-{{ version }}.tar.gz
+  sha256: 5022dd221c340199b15fb2cf7d47c13dd76b452c6d934308bce34cf28248c126
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   entry_points:
     - pdfmorph = diffpy.pdfmorph.pdfmorphapp:main
 
 requirements:
   host:
-    - python >=3
+    - python >=3.10
+    - setuptools
+    - setuptools-git-versioning >=2.0
     - pip
   run:
+    - python >=3.10
     - matplotlib-base
     - diffpy.utils
     - scipy
     - numpy
     - bg-mpl-stylesheets
-    - python >=3
 
 test:
   imports:
     - diffpy.pdfmorph
+  requires:
+    - pip
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pip check
+    - pip list
+    - pytest
 
 about:
   home: http://github.com/diffpy/diffpy.pdfmorph
@@ -43,7 +54,7 @@ about:
     PDFmorph is a Python software package designed to increase the insight
     researchers can get into their spectra collected for atomic pair 
     distribution functions
-  # doc_url: doc_url to be released in a later version.
+  doc_url: https://diffpy.github.io/diffpy.pdfmorph
   dev_url: https://github.com/diffpy/diffpy.pdfmorph
 
 extra:
