@@ -1,13 +1,13 @@
 {% set name = "diffpy.pdfmorph" %}
-{% set version = "0.1.3rc1" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://test.pypi.io/packages/source/d/diffpy_pdfmorph/diffpy_pdfmorph-{{ version }}.tar.gz
-  sha256: 5022dd221c340199b15fb2cf7d47c13dd76b452c6d934308bce34cf28248c126
+  url: https://pypi.io/packages/source/d/diffpy_pdfmorph/diffpy_pdfmorph-{{ version }}.tar.gz
+  sha256: 2998fda4dc83685975f9ce20e57687ba3114f712987b49abcc1112b483a823f0
 
 build:
   noarch: python
@@ -40,7 +40,6 @@ test:
     - tests
   commands:
     - pip check
-    - pip list
     - pytest
 
 about:
