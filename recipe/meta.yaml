@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=3.10
     - matplotlib-base
-    - diffpy.utils
+    - diffpy.utils >=3.4.4
     - scipy
     - numpy
     - bg-mpl-stylesheets
@@ -58,6 +58,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - Sparks29032
     - bobleesj
     - chiahaoliu
     - CJ-Wright

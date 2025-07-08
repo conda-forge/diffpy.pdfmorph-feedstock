@@ -153,6 +153,7 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@Sparks29032](https://github.com/Sparks29032/)
 * [@bobleesj](https://github.com/bobleesj/)
 * [@chiahaoliu](https://github.com/chiahaoliu/)
 * [@pavoljuhas](https://github.com/pavoljuhas/)
