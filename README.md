@@ -1,13 +1,6 @@
 About diffpy.pdfmorph-feedstock
 ===============================
 
-ARCHIVED: This package is no longer being used or maintained.
-Please use the new [``diffpy.morph``](https://www.diffpy.org/diffpy.morph/) package instead.
-
-
-Legacy Information
-==================
-
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/diffpy.pdfmorph-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/diffpy/diffpy.pdfmorph
@@ -25,8 +18,8 @@ researchers can get into their spectra collected for atomic pair
 distribution functions
 
 
-Build status (no longer maintained)
------------------------------------
+Current build status
+====================
 
 
 <table><tr><td>All platforms:</td>
@@ -48,55 +41,48 @@ Current release info
 Installing diffpy.pdfmorph
 ==========================
 
-This ``diffpy.pdfmorph`` namespace is no longer being maintained.
-Please install the new namespace [``diffpy.morph``](https://www.diffpy.org/diffpy.morph/) package instead.
-
-
-Installing diffpy.morph
------------------------
-
-Installing `diffpy.morph` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `diffpy.pdfmorph` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `diffpy.morph` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `diffpy.pdfmorph` can be installed with `conda`:
 
 ```
-conda install diffpy.morph
-```
-
-or with `mamba`:
-
-```
-mamba install diffpy.morph
-```
-
-It is possible to list all of the versions of `diffpy.morph` available on your platform with `conda`:
-
-```
-conda search diffpy.morph --channel conda-forge
+conda install diffpy.pdfmorph
 ```
 
 or with `mamba`:
 
 ```
-mamba search diffpy.morph --channel conda-forge
+mamba install diffpy.pdfmorph
+```
+
+It is possible to list all of the versions of `diffpy.pdfmorph` available on your platform with `conda`:
+
+```
+conda search diffpy.pdfmorph --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search diffpy.pdfmorph --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search diffpy.morph --channel conda-forge
+mamba repoquery search diffpy.pdfmorph --channel conda-forge
 
-# List packages depending on `diffpy.morph`:
-mamba repoquery whoneeds diffpy.morph --channel conda-forge
+# List packages depending on `diffpy.pdfmorph`:
+mamba repoquery whoneeds diffpy.pdfmorph --channel conda-forge
 
-# List dependencies of `diffpy.morph`:
-mamba repoquery depends diffpy.morph --channel conda-forge
+# List dependencies of `diffpy.pdfmorph`:
+mamba repoquery depends diffpy.pdfmorph --channel conda-forge
 ```
 
 
@@ -167,6 +153,7 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@Sparks29032](https://github.com/Sparks29032/)
 * [@bobleesj](https://github.com/bobleesj/)
 * [@chiahaoliu](https://github.com/chiahaoliu/)
 * [@pavoljuhas](https://github.com/pavoljuhas/)
